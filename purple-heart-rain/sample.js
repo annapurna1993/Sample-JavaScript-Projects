@@ -1,0 +1,18 @@
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add("heart");
+
+    //heart.style.left = Math.random() * 10 + 'vw';
+    heart.style.right = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = Math.random() * 2 + 3 +'s';
+
+    heart.innerText= '💘' ;
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
+}
+
+setInterval(createHeart, 500);
